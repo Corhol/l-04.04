@@ -1,0 +1,121 @@
+body {
+  background: #edeff0;
+}
+
+.container {
+  width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main .container {
+  display: grid;
+  grid-template-columns: repeat(4, 263px);
+  grid-template-rows: 579px 370px 170px;
+  grid-template-areas:
+    "head head head head"
+    "cars cars art columns"
+    "cat text1 text2 columns"
+    "cat text3 text4 columns";
+  grid-column-gap: 29px;
+  grid-row-gap: 30px;
+}
+.head {
+  background-image: url("./images/qwe.png");
+  grid-area: head;
+  background-size: cover;
+}
+.car {
+  background-image: url("./images/cars.png");
+  grid-area: cars;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 50%;
+  border-radius: 10px;
+}
+
+.pcar {
+  width: 238px;
+  height: 90px;
+  font-family: "Roboto Slab";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  color: #262d33;
+  padding-left: 25px;
+}
+
+.carp {
+  width: 250px;
+  font-style: normal;
+  font-weight: 50;
+  font-size: 18px;
+  line-height: 20px;
+  color: #4b5157;
+  padding-left: 25px;
+}
+
+.car h3 {
+  color: gray;
+  font-size: 24px;
+  padding-left: 25px;
+}
+
+.art {
+  background-image: url("./images/art.png");
+  color: white;
+}
+.colmns {
+  background: #6e99ae;
+  grid-area: columns;
+  border-radius: 10px;
+}
+.cat {
+  grid-area: cat;
+  font-size: 16px;
+  font-family: "Roboto Slab";
+  border-radius: 10px;
+}
+
+.cat,
+.car,
+.text1,
+.text2,
+.text3,
+.text4 {
+  background-color: rgb(255, 255, 255);
+}
+
+.text1 h3,
+.text2 h3,
+.text3 h3,
+.text4 h3 {
+  font-family: "Roboto Slab";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 25px;
+  color: #262d33;
+}
+.text1,
+.text2,
+.text3,
+.text4 {
+  padding-left: 25px;
+  padding-right: 25px;
+  border-radius: 10px;
+}
+
+.text1 {
+  grid-area: text1;
+}
+.text2 {
+  grid-area: text2;
+}
+.text3 {
+  grid-area: text3;
+}
+.text4 {
+  grid-area: text4;
+}
