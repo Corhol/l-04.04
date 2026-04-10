@@ -1,7 +1,9 @@
 body {
-  background: #edeff0;
+  background: #262d33;
 }
-
+.cilir {
+  background-color: #262d33;
+}
 .container {
   width: 1140px;
   margin-left: auto;
@@ -11,8 +13,9 @@ body {
 .main .container {
   display: grid;
   grid-template-columns: repeat(4, 263px);
-  grid-template-rows: 579px 370px 170px;
+  grid-template-rows: 130px 579px 370px 170px;
   grid-template-areas:
+    "neul1 neul2 neul3 neul4"
     "head head head head"
     "cars cars art columns"
     "cat text1 text2 columns"
@@ -20,6 +23,88 @@ body {
   grid-column-gap: 29px;
   grid-row-gap: 30px;
 }
+
+.knipki a {
+  all: unset;
+}
+.knipki {
+  color: #ffffff;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.knipki ul {
+  display: flex;
+  gap: 47px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.knipki li {
+  margin: 0;
+  align-items: center;
+}
+
+.paint {
+  background-color: #30363d;
+}
+.neul1,
+.neul2,
+.neul3,
+.neul4 {
+  margin-top: 30px;
+  background-color: #30363d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  border-radius: 24px;
+}
+
+.neul1 p,
+.neul2 p,
+.neul3 p,
+.neul4 p {
+  margin: 0;
+  font-family: "Roboto Slab";
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.neul1 img,
+.neul2 img,
+.neul3 img,
+.neul4 img {
+  width: 65px;
+  height: 65px;
+}
+
+.neul1 div,
+.neul2 div,
+.neul3 div,
+.neul4 div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.neul1 {
+  grid-area: neul1;
+}
+.neul2 {
+  grid-area: neul2;
+}
+.neul3 {
+  grid-area: neul3;
+}
+.neul4 {
+  grid-area: neul4;
+}
+
 .head {
   background-image: url("./images/qwe.png");
   grid-area: head;
