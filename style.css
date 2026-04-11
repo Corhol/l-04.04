@@ -1,7 +1,27 @@
 body {
-  background: #edeff0;
+  background: #adadad;
+  margin: 0;
+}
+p {
+  margin-left: 0px;
+}
+.main {
+  background-color: #edefff;
+  padding-bottom: 20px;
+  position: relative;
+  height: 1670px;
+}
+ol,
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
+.main .dark {
+  background-color: #262d33;
+  height: 530px;
+}
 .container {
   width: 1140px;
   margin-left: auto;
@@ -11,15 +31,111 @@ body {
 .main .container {
   display: grid;
   grid-template-columns: repeat(4, 263px);
-  grid-template-rows: 579px 370px 170px;
+  grid-template-rows: 55px 130px 579px 370px 170px;
   grid-template-areas:
+    "nav nav nav nav"
+    "posters posters posters posters"
     "head head head head"
     "cars cars art columns"
     "cat text1 text2 columns"
     "cat text3 text4 columns";
   grid-column-gap: 29px;
   grid-row-gap: 30px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
+
+.posters {
+  background-color: #30363d;
+  grid-area: posters;
+  display: grid;
+  grid-template-columns: repeat(4, 263px);
+  grid-template-areas: "neul1 neul2 neul3 neul4";
+  grid-column-gap: 29px;
+  border-radius: 10px;
+}
+
+.knipki a {
+  all: unset;
+}
+.knipki {
+  grid-area: nav;
+  color: #ffffff;
+
+  display: flex;
+  align-items: center;
+
+  background-color: #262d33;
+}
+
+.knipki ul {
+  display: flex;
+  width: 100%;
+
+  justify-content: space-between;
+  gap: 47px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.knipki li {
+  margin: 0;
+  align-items: center;
+}
+
+.neul1,
+.neul2,
+.neul3,
+.neul4 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+}
+
+.neul1 p,
+.neul2 p,
+.neul3 p,
+.neul4 p {
+  margin: 0;
+  font-family: "Roboto Slab";
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.neul1 img,
+.neul2 img,
+.neul3 img,
+.neul4 img {
+  width: 65px;
+  height: 65px;
+}
+
+.neul1 div,
+.neul2 div,
+.neul3 div,
+.neul4 div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.neul1 {
+  grid-area: neul1;
+}
+.neul2 {
+  grid-area: neul2;
+}
+.neul3 {
+  grid-area: neul3;
+}
+.neul4 {
+  grid-area: neul4;
+}
+
 .head {
   background-image: url("./images/qwe.png");
   grid-area: head;
@@ -118,4 +234,45 @@ body {
 }
 .text4 {
   grid-area: text4;
+}
+.fliwir {
+  height: 270px;
+  background-image: url(./images/flower.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.news .text {
+  width: 437px;
+}
+.news .container {
+  display: grid;
+  grid-template-columns: 848px 263px;
+}
+.news .left li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 25px;
+  padding-right: 25px;
+  background-color: #ffffff;
+}
+.news .left li button {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  background-color: transparent;
+  border: none;
+}
+.news .left li button img {
+  cursor: pointer;
+}
+.news .left li .count {
+  display: flex;
+  align-items: center;
+}
+.news .left li .info {
+  display: flex;
+  align-items: center;
+  gap: 11px;
 }
